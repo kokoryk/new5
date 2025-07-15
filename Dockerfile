@@ -13,9 +13,6 @@ RUN npm install --omit=dev
 # Copy application code
 COPY . .
 
-# Build the application
-RUN npm run build:backend
-
 # Expose port
 EXPOSE 10000
 
@@ -23,4 +20,4 @@ EXPOSE 10000
 ENV NODE_ENV=production
 
 # Start the application
-CMD ["npm", "run", "start:backend"]
+CMD ["npm", "start"]
